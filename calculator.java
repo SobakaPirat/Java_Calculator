@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class calculator {
     public static void main(String[] args) {
+        parse();
+    }
+
+    static void parse()
+    {
         int num1;
         int num2;
         String operation;
@@ -14,7 +19,7 @@ public class calculator {
         operation = input.next();
         num2 = input.nextInt();
 
-        //System.out.println(num1 + " " + operation + " " + num2);
+        System.out.println(num1 + " " + operation + " " + num2);
         //проверка ввода
     }
 
