@@ -50,6 +50,20 @@ public class calculator {
         }
         return (num_int);
     }
+
+    public static int Сheck(String number){
+        boolean stop_checker = true;
+        int num_checker = 0;
+        while (stop_checker) {
+            num_checker = ToInt(number);
+            if (num_checker == 0){
+                System.out.println("Число вышло за границы. Попробуйте ещё раз.");
+            } else {
+                stop_checker = false;
+            }
+        }
+        return (num_checker);
+    }
     
 
 }
