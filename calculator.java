@@ -5,7 +5,6 @@ public class calculator {
  
     public static void main(String[] args) {
         parse();
-        System.out.println(ToInt("V"));
         //int result = calc(num1,num2,operation);
         //System.out.println("Результат операции: "+result);
     }
@@ -19,7 +18,7 @@ public class calculator {
         String operation;
 
 
-        Scanner input = new Scanner(System.in);//ввод
+        Scanner input = new Scanner(System.in, "cp866");//ввод
         System.out.println("введите пример");
 
         num1 = input.next();
@@ -39,18 +38,14 @@ public class calculator {
         String [] romans = {"I","II","III","IV","V","VI","VII","VIII","IX","X"};
         String [] arabics = {"1","2","3","4","5","6","7","8","9","10"};
         for (int i = 0; i < 10; i++){
-            System.out.println(number);
-            System.out.println(romans[i]);
-            if (romans[i] == number){
+            if (romans[i].equals(number)){
             roman_checker++;
             num_int = i + 1;
-            System.out.println(num_int);
             }    
         }
         for (int i = 0; i < 10; i++){
-            if (arabics[i] == number){
+            if (arabics[i].equals(number)){
             num_int = i + 1;
-            System.out.println(num_int);
             }    
         }
         return (num_int);
