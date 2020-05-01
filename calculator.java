@@ -75,7 +75,7 @@ public class calculator {
 
         public static void limit(int check_number){   // выход за пределы
             if (check_number == 0) {
-                System.out.println("numbers are not in the range 1-10, or entered not in the form x + x.");
+                System.out.println("number are not integer,or numbers are not in the range 1-10, or entered not in the form x + x.");
                 System.exit(0);
             } 
         }
