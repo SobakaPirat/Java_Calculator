@@ -6,44 +6,35 @@ public class calculator {
  
     
     public static void main(String[] args) {
-            
+        String num1;
+        String num2;
+        int num1_int;
+        int num2_int;
+        int  answer;
+        String operation;
 
-        PARSER.parse();
+
+        Scanner input = new Scanner(System.in);//ввод
+        System.out.println("enter an example");
+
+        num1 = input.next();
+        num1_int = ROMAN.ToInt(num1);
+        CHECKER.limit(num1_int);
+
+        operation = input.next();
+
+        num2 = input.next();
+        num2_int = ROMAN.ToInt(num2);
+        CHECKER.limit(num2_int);
+
+        CHECKER.roman();
+        
+
+        answer = (CHECKER.opearation(num1_int, num2_int, operation));
+        System.out.println(ROMAN.ToRoman(answer));
     }
     
 
-    public static class PARSER{
-        public static void parse()
-        {   
-
-            String num1;
-            String num2;
-            int num1_int;
-            int num2_int;
-            int  answer;
-            String operation;
-
-
-            Scanner input = new Scanner(System.in);//ввод
-            System.out.println("enter an example");
-
-            num1 = input.next();
-            num1_int = ROMAN.ToInt(num1);
-            CHECKER.limit(num1_int);
-
-            operation = input.next();
-
-            num2 = input.next();
-            num2_int = ROMAN.ToInt(num2);
-            CHECKER.limit(num2_int);
-
-            CHECKER.roman();
-            
-
-            answer = (CHECKER.opearation(num1_int, num2_int, operation));
-            System.out.println(ROMAN.ToRoman(answer));
-        }
-    }
     public static class ROMAN{
         static int roman_checker = 0; //если 0 - вывод арабских; 2 - римских; 1 - ошибка.
         static String [] romans = {"I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX","XXI","XXII","XXIII","XXIV","XXV","XXVI","XXVII","XXVIII","XXIX","XXX","XXXI","XXXII","XXXIII","XXXIV","XXXV","XXXVI","XXXVII","XXXVIII","XXXIX","XL","XLI","XLII","XLIII","XLIV","XLV","XLVI","XLVII","XLVIII","XLIX","L","LI","LII","LIII","LIV","LV","LVI","LVII","LVIII","LIX","LX","LXI","LXII","LXIII","LXIV","LXV","LXVI","LXVII","LXVIII","LXIX","LXX","LXXI","LXXII","LXXIII","LXXIV","LXXV","LXXVI","LXXVII","LXXVIII","LXXIX","LXXX","LXXXI","LXXXII","LXXXIII","LXXXIV","LXXXV","LXXXVI","LXXXVII","LXXXVIII","LXXXIX","XC","XCI","XCII","XCIII","XCIV","XCV","XCVI","XCVII","XCVIII","XCIX","C"};
