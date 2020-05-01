@@ -1,3 +1,4 @@
+//don't judge strictly, this is my first java program
 import java.util.Scanner;
 
 
