@@ -9,8 +9,6 @@ public class calculator {
             
 
         PARSER.parse();
-        //int result = calc(num1,num2,operation);
-        //System.out.println("Результат операции: "+result);
     }
     
 
