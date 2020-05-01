@@ -86,7 +86,7 @@ public class calculator {
 
         public static void limit(int check_number){
             if (check_number == 0) {
-                System.out.println("chisla ne nahodyatsya v predelah 1-10; i-x.");
+                System.out.println("chisla ne nahodyatsya v predelah 1-10, libo vvedeni ne po forme x + x.");
                 System.exit(0);
             } 
         }
